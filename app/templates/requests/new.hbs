@@ -1,9 +1,3 @@
 New Release Request form
-{{outlet}}
 
-<BsForm @onSubmit={{action "submit"}} as |form|>
-  <form.group>
-    <label class="control-label">First name</label>
-    <input value={{this.firstname}} class="form-control" oninput={{action (mut this.firstname) value="target.value"}} type="text">
-  </form.group>
-</BsForm>
+<NewRequestForm/>

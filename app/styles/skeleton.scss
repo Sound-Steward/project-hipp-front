@@ -14,8 +14,9 @@ div#main-content{
   position: fixed;
   top: 0;
   bottom: 0;
-  max-width: 100%;
+  width: 100%;
   padding-left: 260px;
   z-index: 1;
   flex: 1 auto;
+  overflow-y: scroll;
 }
