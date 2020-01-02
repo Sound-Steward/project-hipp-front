@@ -1,91 +1,104 @@
+<div class="container">
+  <BsForm @model={{this}} @onSubmit={{action "sendToPreview"}} as |form|>
+    <div class="row">
+      <form.group class="col">
+        <label class="control-label">First name</label>
+        <input value={{this.firstname}} class="form-control" oninput={{action (mut this.firstname) value="target.value"}} type="text">
+      </form.group>
 
-<BsForm @onSubmit={{action "submit"}} as |form|>
+      <form.group class="col">
+        <label class="control-label">Last name</label>
+        <input value={{this.lastname}} class="form-control" oninput={{action (mut this.lastname) value="target.value"}} type="text">
+      </form.group>
+    </div>
 
-  <form.group>
-    <label class="control-label">First name</label>
-    <input value={{this.firstname}} class="form-control" oninput={{action (mut this.firstname) value="target.value"}} type="text">
-  </form.group>
+    <div class="row">
+      <form.group class="col">
+        <label class="control-label">Date of Birth</label>
+        <input value={{this.dob}} class="form-control" oninput={{action (mut this.dob) value="target.value"}} type="text">
+      </form.group>
 
-  <form.group>
-    <label class="control-label">Last name</label>
-    <input value={{this.lastname}} class="form-control" oninput={{action (mut this.lastname) value="target.value"}} type="text">
-  </form.group>
+      <form.group class="col">
+        <label class="control-label">Social Security Number</label>
+        <input value={{this.ssn}} class="form-control" oninput={{action (mut this.ssn) value="target.value"}} type="text">
+      </form.group>
 
-  <form.group>
-    <label class="control-label">Date of Birth</label>
-    <input value={{this.dob}} class="form-control" oninput={{action (mut this.dob) value="target.value"}} type="text">
-  </form.group>
+      <form.group class="col">
+        <label class="control-label">Telephone Number</label>
+        <input value={{this.telnum}} class="form-control" oninput={{action (mut this.telnum) value="target.value"}} type="text">
+      </form.group>
+    </div>
 
-  <form.group>
-    <label class="control-label">Social Security Number</label>
-    <input value={{this.ssn}} class="form-control" oninput={{action (mut this.ssn) value="target.value"}} type="text">
-  </form.group>
+    <div class="row">
+      <form.group class="col">
+        <label class="control-label">Master Patient Index Number</label>
+        <input value={{this.mpin}} class="form-control" oninput={{action (mut this.mpin) value="target.value"}} type="text">
+      </form.group>
+    </div>
 
-  <form.group>
-    <label class="control-label">Telephone Number</label>
-    <input value={{this.telnum}} class="form-control" oninput={{action (mut this.telnum) value="target.value"}} type="text">
-  </form.group>
+    <div class="row">
+      <form.group class="col">
+        <label class="control-label">Specific description of health information to be disclosed</label>
+        <textarea value={{this.dis_specific}} class="form-control" oninput={{action (mut this.dis_specific) value="target.value"}} rows="11" type="text"></textarea>
+      </form.group>
+    </div>
 
-  <form.group>
-    <label class="control-label">Master Patient Index Number</label>
-    <input value={{this.mpin}} class="form-control" oninput={{action (mut this.mpin) value="target.value"}} type="text">
-  </form.group>
+    <div class="row">
+      <form.group class="col">
+        <label class="control-label">Date to Disclose From</label>
+        <input value={{this.dis_from}} class="form-control" oninput={{action (mut this.dis_date_from) value="target.value"}} type="text">
+      </form.group>
 
-  <form.group>
-    <label class="control-label">Specific description of health information to be disclosed</label>
-    <input value={{this.dis_specific}} class="form-control" oninput={{action (mut this.dis_specific) value="target.value"}} type="text">
-  </form.group>
+      <form.group class="col">
+        <label class="control-label">Date to Disclose To</label>
+        <input value={{this.dis_to}} class="form-control" oninput={{action (mut this.dis_date_to) value="target.value"}} type="text">
+      </form.group>
+    </div>
 
-  <form.group>
-    <label class="control-label">Disclose From</label>
-    <input value={{this.dis_from}} class="form-control" oninput={{action (mut this.dis_from) value="target.value"}} type="text">
-  </form.group>
+    <div class="row">
+      <form.group class="col">
+        <label class="control-label">Specific purpose of disclosure</label>
+        <textarea value={{this.purpose}} class="form-control" oninput={{action (mut this.purpose) value="target.value"}} rows="11" type="text"></textarea>
+      </form.group>
+    </div>
 
-  <form.group>
-    <label class="control-label">Disclose To</label>
-    <input value={{this.dis_to}} class="form-control" oninput={{action (mut this.dis_to) value="target.value"}} type="text">
-  </form.group>
+    <div class="row">
+      <form.group class="col">
+        <label class="control-label">Persons or Organizations using or disclosing</label>
+        <input value={{this.party_using}} class="form-control" oninput={{action (mut this.party_using) value="target.value"}} type="text">
+      </form.group>
 
-  <form.group>
-    <label class="control-label">Purpose of disclosure</label>
-    <input value={{this.purpose}} class="form-control" oninput={{action (mut this.purpose) value="target.value"}} type="text">
-  </form.group>
+      <form.group class="col">
+        <label class="control-label">Persons or Organizations Recieving</label>
+        <input value={{this.party_recieving}} class="form-control" oninput={{action (mut this.party_recieving) value="target.value"}} type="text">
+      </form.group>
+    </div>
 
-  <form.group>
-    <label class="control-label">Persons or Organizations using or disclosing</label>
-    <input value={{this.party_use}} class="form-control" oninput={{action (mut this.party_use) value="target.value"}} type="text">
-  </form.group>
+    <div class="row">
+      <form.group class="col">
+        <label class="control-label">Effective Span (e.g. 180 days)</label>
+        <input value={{this.eff_span}} class="form-control" oninput={{action (mut this.eff_span) value="target.value"}} type="text">
+      </form.group>
+    </div>
 
-  <form.group>
-    <label class="control-label">Persons or Organizations Using</label>
-    <input value={{this.party_using}} class="form-control" oninput={{action (mut this.party_using) value="target.value"}} type="text">
-  </form.group>
+    <div class="row">
+      <form.group class="col">
+        <label class="control-label">Signiature Date</label>
+        <input value={{this.sig_date}} class="form-control" oninput={{action (mut this.sig_date) value="target.value"}} type="text">
+      </form.group>
 
-  <form.group>
-    <label class="control-label">Persons or Organizations Recieving</label>
-    <input value={{this.party_recieving}} class="form-control" oninput={{action (mut this.party_recieving) value="target.value"}} type="text">
-  </form.group>
+      <form.group class="col">
+        <label class="control-label">Signiature</label>
+        <input value={{this.sig}} class="form-control" oninput={{action (mut this.sig) value="target.value"}} type="text">
+      </form.group>
+    </div>
 
-  <form.group>
-    <label class="control-label">Effective Span</label>
-    <input value={{this.eff_span}} class="form-control" oninput={{action (mut this.eff_span) value="target.value"}} type="text">
-  </form.group>
+    <BsButton @buttonType="sendToPreview(this)" @model={{this}} @disabled={{form.isSubmitting}}>
+      Preview Release Request
+      {{#if form.isSubmitting}} {{fa-icon "spinner"}} {{/if}}
+    </BsButton>
 
-  <form.group>
-    <label class="control-label">Signiature Date</label>
-    <input value={{this.sig_date}} class="form-control" oninput={{action (mut this.sig_date) value="target.value"}} type="text">
-  </form.group>
-
-  <form.group>
-    <label class="control-label">Signiature</label>
-    <input value={{this.sig}} class="form-control" oninput={{action (mut this.sig) value="target.value"}} type="text">
-  </form.group>
-
-  <BsButton @buttonType="submit" @disabled={{form.isSubmitting}}>
-    Save
-    {{#if form.isSubmitting}} {{fa-icon "spinner"}} {{/if}}
-  </BsButton>
-
-</BsForm>
+  </BsForm>
+</div>
 
 {{! yield}}
