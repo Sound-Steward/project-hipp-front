@@ -1,3 +1,11 @@
+html, body {
+  -webkit-app-region: drag;
+}
+
+input, select, textarea, button, a {
+  -webkit-app-region: no-drag;
+}
+
 main{
   display: flex;
   flex: 1;

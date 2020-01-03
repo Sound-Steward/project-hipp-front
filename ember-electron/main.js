@@ -77,6 +77,8 @@ app.on('ready', () => {
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
+
+  require('./ipc');
 });
 
 // Handle an unhandled error in the main thread

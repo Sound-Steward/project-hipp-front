@@ -61,4 +61,8 @@
 
 </article>
 
+<!-- <BsButton @onClick={{action @submitForm @model}}>Submit</BsButton> -->
+
+<BsButton {{on "click" (fn this.submitForm this.model)}}>Submit</BsButton>
+
 {{outlet}}
