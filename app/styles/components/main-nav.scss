@@ -1,0 +1,11 @@
+aside#main-nav-component {
+  width: 260px;
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #242939;
+  z-index: 1000;
+  flex: 0 0 auto;
+}

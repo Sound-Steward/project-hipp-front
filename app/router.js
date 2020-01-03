@@ -7,4 +7,11 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
+  this.route('requests', function() {
+    this.route('index', {path: '/'});
+    this.route('request', {path: '/:request_id'});
+    this.route('new');
+    //TODO: lets not do this with :firstname
+    this.route('review', {path: '/:firstname'});
+  });
 });
