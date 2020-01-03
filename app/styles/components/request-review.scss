@@ -1,0 +1,15 @@
+article.release-preview {
+  width: 80%;
+  margin: 0 auto;
+  padding: 36px;
+  background-color: #fff;
+  border: 1px solid darken(#e1e1e161, 5%);
+}
+
+.release-preview p {
+  font-family: times, serif;
+}
+
+.release-preview p strong {
+  text-decoration: underline;
+}

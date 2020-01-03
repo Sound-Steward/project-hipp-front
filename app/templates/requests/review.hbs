@@ -1,30 +1,14 @@
-{{!log model}}
-
-{{!model.firstname}}
-{{!model.lastname}}
-{{!model.dob}}
-{{!model.ssn}}
-{{!model.telnum}}
-{{!model.mpin}}
-{{!model.dis_specific}}
-{{!model.dis_date_from}}
-{{!model.dis_date_to}}
-{{!model.purpose}}
-{{!model.party_using}}
-{{!model.party_recieving}}
-{{!model.eff_span}}
-{{!model.sig_date}}
-{{!model.sig}}
-
 <article class="release-preview">
   <header class="release-preview header"></header>
 
   <section class="release-preview patient-info">
-    <p>Patient Name: {{model.firstname}} {{model.lastname}}</p>
-    <p>Date of Birth: {{model.dob}}</p>
-    <p>Social Security No.: {{model.ssn}}</p>
-    <p>Telephone Number: {{model.telnum}}</p>
+    <p><strong>Patient Name:</strong> {{@model.firstname}} {{@model.lastname}}</p>
+    <p><strong>Date of Birth:</strong> {{@model.dob}}</p>
+    <p><strong>Social Security No.:</strong> {{@model.ssn}}</p>
+    <p><strong>Telephone Number:</strong> {{@model.telnum}}</p>
   </section>
+
+  <hr />
 
   <section class="release-preview initial-disclosure-statment">
     <p>I hereby authorize the use and disclosure of the individually identifiable health information about me that is described below for the specific purposes listed below.  I understand that such uses and disclosures may only be made by, and only to, the persons or organizations identified below.  I further permit and authorize the person(s) or organizations disclosing this information to discuss any of my conditions, care or treatment verbally with my attorneys upon their request.</p>
@@ -32,44 +16,47 @@
     <p> I understand that health care provider or insurer may not and will not condition health care treatment or payment, or enrollment in a health plan or eligibility for health care benefits, upon my signing this authorization for the requested use and disclosure.  I further understand that if the person or organization to whom this information is disclosed is not a health plan or health care provider, or if the information does not relate to a federally-funded substance abuse program, the information may no longer be protected by federal privacy law and regulations after disclosure.  In such a case, the information may be redisclosed by the recipient to others for other purposes.  I understand that I may, at any time, inspect or obtain a copy of the information about me that will be used and disclosed, as described below.</p>
   </section>
 
+  <hr />
+
   <section class="release-preview specific-description">
-    <p>Specific description of health information to be used or disclosed:</p>
-    <p>{{model.dis_specific}}</p>
-    <small>(e.g. if not specifically limited or restricted, the types of information to be used or disclosed may include  medical, psychiatric, or  psychological records, records of evaluation and treatment for alcohol or drug abuse, records and results of HTLV-III, HIV, or AIDS testing, billings, radiology, films and or reports, etc.)</small>
+    <p><strong>Specific description of health information to be used or disclosed:</strong></p>
+    <p>{{@model.dis_specific}}</p>
+    <small><i>(e.g. if not specifically limited or restricted, the types of information to be used or disclosed may include  medical, psychiatric, or  psychological records, records of evaluation and treatment for alcohol or drug abuse, records and results of HTLV-III, HIV, or AIDS testing, billings, radiology, films and or reports, etc.)</i></small>
   </section>
 
   <section class="release-preview dates-of-treatment">
-    <p>Approximate dates of treatment: {{model.dis_date_from}} to {{model.dis_date_to}}</p>
+    <p><strong>Approximate dates of treatment:</strong> {{@model.dis_date_from}} to {{@model.dis_date_to}}</p>
   </section>
 
   <section class="release-preview purpose-of-disclosure">
-    <p>Purpose of the use or disclosure:</p>
-    <p>{{model.purpose}}</p>
-    <small>(e.g. further care, insurance claim, attorney inquiry, at the request of the individual, personal use)
-</small>
+    <p><strong>Purpose of the use or disclosure:</strong></p>
+    <p>{{@model.purpose}}</p>
+    <small><i>(e.g. further care, insurance claim, attorney inquiry, at the request of the individual, personal use)</i></small>
   </section>
 
   <section class="release-preview using-or-disclosing-release-info">
-    <p>Persons or organizations using or disclosing the information:</p>
-    <p>{{model.party_using}}</p>
+    <p><strong>Persons or organizations using or disclosing the information:</strong></p>
+    <p>{{@model.party_using}}</p>
   </section>
 
   <section class="release-preview recieving-info">
-  <p>Persons or organizations receiving the information:</p>
-  <p>{{model.party_recieving}}</p>
+    <p><strong>Persons or organizations receiving the information:</strong></p>
+  <p>{{@model.party_recieving}}</p>
   </section>
+
+  <hr />
 
   <section class="release-preview secondary-disclosure-statement">
     <p>I understand that my decision to sign this form and authorize this use and disclosure of health information about me, as described above, is entirely voluntary and that I may refuse to sign this form.  I understand that I may revoke this authorization, in writing, at any time.  However, such a revocation will not be effective for uses or disclosures that have already been made, or other actions that have already been taken, in reliance on this authorization or as required by law.</p>
 
-    <p>Unless revoked by me sooner or limited or restricted to a shorter time period by applicable law, this authorization shall be effective for {{model.eff_span}}  days after the date of my signing below.  I understand that I am entitled to a copy of this authorization after signing below</p>
+    <p>Unless revoked by me sooner or limited or restricted to a shorter time period by applicable law, this authorization shall be effective for <strong>{{@model.eff_span}} days</strong> after the date of my signing below.  I understand that I am entitled to a copy of this authorization after signing below</p>
   </section>
 
   <section class="release-preview signiature-notice">
-    <p>I ACCEPT THESE TERMS AND AUTHORIZE THE ABOVE USE AND DISCLOSURE:</p>
+    <p><strong>I ACCEPT THESE TERMS AND AUTHORIZE THE ABOVE USE AND DISCLOSURE:</strong></p>
 
-    <p>Date: {{model.sig_date}}</p>
-    <p>Signature: {{model.sig}}</p>
+    <p><strong>Date:</strong> {{@model.sig_date}}</p>
+    <p><strong>Signature:</strong> {{@model.sig}}</p>
   </section>
 
 </article>
