@@ -8,7 +8,7 @@ export default class RequestsReviewController extends Controller {
     const { ipcRenderer } = requireNode('electron');
 
     let dataForIpc = {
-      firstName: formData.firstsname,
+      firstName: formData.firstname,
       lastName: formData.lastname,
       dob: formData.dob,
       ssn: formData.ssn,

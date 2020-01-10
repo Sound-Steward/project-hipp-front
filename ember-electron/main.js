@@ -43,8 +43,11 @@ app.on('window-all-closed', () => {
 
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
-    width: 1024,
+    width: 1280,
     height: 800,
+    center: true,
+    titleBarStyle: 'hiddenInset',
+    frame: false
   });
 
   // If you want to open up dev tools programmatically, call
